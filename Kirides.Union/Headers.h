@@ -4,8 +4,6 @@
 // Automatically generated block
 #pragma region Includes
 #include "Plugin.h"
-//#include "ManaReg.h"
-//#include "Quickloot.h"
 #pragma endregion
 
 // ...
