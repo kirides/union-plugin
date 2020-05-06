@@ -338,3 +338,9 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+
+Kirides.Union/G2A Debug
+Kirides.Union/G2A Release
+Kirides.Union/MP Debug
+Kirides.Union/MP Release
