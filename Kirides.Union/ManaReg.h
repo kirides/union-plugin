@@ -27,14 +27,9 @@ namespace ManaReg {
     }
 
     void Init() {
-        TCHAR NPath[MAX_PATH];
-        // Returns Gothic directory.
-        int len = GetCurrentDirectory(MAX_PATH, NPath);
-        // Get path to Gothic.Ini
-        auto ini = std::string(NPath, len).append("\\system\\Gothic.ini");
+        g_regRate = Gothic::Options::Gothic->ReadInt("UNION_MANAREG", "iValue", 2);
+        g_regTickRate = Gothic::Options::Gothic->ReadInt("UNION_MANAREG", "iTickRate", 2000);
 
-        g_regRate = GetPrivateProfileInt("UNION_MANAREG", "iVALUE", 2, ini.c_str());
-        g_regTickRate = GetPrivateProfileInt("UNION_MANAREG", "iTICKRATE", 2000, ini.c_str());
         Ivk_oCNpc__ProcessNpc = std::make_unique<CInvoke<void(__fastcall*)(oCNpc* _this)>>(vftable_oCNpc::GetTable().names.f74_ProcessNpc, &RegeneratePlayerMana_ProcessNpc);
     }
 
