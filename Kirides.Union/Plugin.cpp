@@ -11,9 +11,9 @@ namespace GOTHIC_ENGINE {
 	}
 
 	void Game_Init() {
-		if (Gothic::Options::Gothic->ReadBool("UNION_KIRIDES", "bManaReg", true))
+		if (Gothic::Options::Gothic->ReadBool(PLUGIN_INI_MAIN, "bManaReg", true))
 			REGISTER_PLUGIN(ManaReg);
-		if (Gothic::Options::Gothic->ReadBool("UNION_KIRIDES", "bQuickLoot", true))
+		if (Gothic::Options::Gothic->ReadBool(PLUGIN_INI_MAIN, "bQuickLoot", true))
 			REGISTER_PLUGIN(Quickloot);
 	}
 

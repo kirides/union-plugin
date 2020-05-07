@@ -46,9 +46,9 @@ namespace ManaReg {
             is_player_obsessed = [ps_SC_IsObsessed]() { return (ps_SC_IsObsessed && ps_SC_IsObsessed->single_intdata != 0); };
         }
 
-        g_regRate = Gothic::Options::Gothic->ReadInt("UNION_MANAREG", "iValue", 2);
-        g_isFlatRegen = Gothic::Options::Gothic->ReadInt("UNION_MANAREG", "bFlat", IS_G1 ? 1 : 0);
-        g_regTickRate = Gothic::Options::Gothic->ReadInt("UNION_MANAREG", "iTickRate", 2000);
+        g_regRate = Gothic::Options::Gothic->ReadInt(PLUGIN_INI_SECTION("MANAREG"), "iValue", 2);
+        g_isFlatRegen = Gothic::Options::Gothic->ReadInt(PLUGIN_INI_SECTION("MANAREG"), "bFlat", IS_G1 ? 1 : 0);
+        g_regTickRate = Gothic::Options::Gothic->ReadInt(PLUGIN_INI_SECTION("MANAREG"), "iTickRate", 2000);
 
         Ivk_oCNpc__ProcessNpc = std::make_unique<CInvoke<void(__fastcall*)(oCNpc* _this)>>(vftable_oCNpc::GetTable().names.f74_ProcessNpc, &Hook_oCNpc__ProcessNpc);
     }
