@@ -2,7 +2,8 @@
 // File: "Sources.h"
 #ifndef __PLUGIN__CLEANUP
 #define __PLUGIN__CLEANUP
-#define REGISTER_PLUGIN(x) { GOTHIC_ENGINE::x::Init(); cleanup.push_back(GOTHIC_ENGINE::x::Destroy); }
+#define REGISTER_PLUGIN(x) {  GOTHIC_ENGINE::x::Init(); cleanup.push_back(GOTHIC_ENGINE::x::Destroy); }
+#define REGISTER_PLUGIN_IF_ENABLED(x) if (Gothic::Options::Gothic->ReadBool(PLUGIN_INI_MAIN, "b" #x, true)) {  REGISTER_PLUGIN(x) }
 std::vector<std::function<void()>> cleanup;
 #endif
 namespace GOTHIC_ENGINE {
@@ -11,10 +12,8 @@ namespace GOTHIC_ENGINE {
 	}
 
 	void Game_Init() {
-		if (Gothic::Options::Gothic->ReadBool(PLUGIN_INI_MAIN, "bManaReg", true))
-			REGISTER_PLUGIN(ManaReg);
-		if (Gothic::Options::Gothic->ReadBool(PLUGIN_INI_MAIN, "bQuickLoot", true))
-			REGISTER_PLUGIN(Quickloot);
+		REGISTER_PLUGIN_IF_ENABLED(ManaReg);
+		REGISTER_PLUGIN_IF_ENABLED(QuickLoot);
 	}
 
 	void Game_Exit() {

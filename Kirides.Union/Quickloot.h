@@ -1,4 +1,4 @@
-namespace Quickloot {
+namespace QuickLoot {
 	using namespace GOTHIC_ENGINE;
 	unsigned long curFrameTime = 0;
 	int textOffset = 0;
