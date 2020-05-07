@@ -13,6 +13,6 @@
 // File: "Headers.h"
 namespace GOTHIC_ENGINE {
 	// Add your code here . . .
-#include "ManaReg.h"
-#include "Quickloot.h"
+#include "Plugin_ManaReg.h"
+#include "Plugin_QuickLoot.h"
 }

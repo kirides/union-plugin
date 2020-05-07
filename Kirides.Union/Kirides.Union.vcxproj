@@ -472,7 +472,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DllMain.cpp" />
-    <ClInclude Include="ManaReg.h" />
+    <ClInclude Include="Plugin_ManaReg.h" />
     <ClInclude Include="Plugin.cpp" />
     <ClCompile Include="Interface.cpp" />
     <ClCompile Include="ZenGin\Gothic_II_Addon\ClassDeclarators_G2A.cpp" />
@@ -491,7 +491,7 @@
   <ItemGroup>
     <ClInclude Include="Plugin.h" />
     <ClInclude Include="Headers.h" />
-    <ClInclude Include="Quickloot.h" />
+    <ClInclude Include="Plugin_QuickLoot.h" />
     <ClInclude Include="Sources.h" />
     <ClInclude Include="UnionAfx.h" />
     <ClInclude Include="ZenGin\Gothic_II_Addon\API\oAiHuman.h" />

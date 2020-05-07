@@ -2777,10 +2777,10 @@
     <ClInclude Include="Plugin.h">
       <Filter>Plugin\Workspace\Plugin</Filter>
     </ClInclude>
-    <ClInclude Include="ManaReg.h">
+    <ClInclude Include="Plugin_ManaReg.h">
       <Filter>Plugin\Workspace\Plugin</Filter>
     </ClInclude>
-    <ClInclude Include="Quickloot.h">
+    <ClInclude Include="Plugin_QuickLoot.h">
       <Filter>Plugin\Workspace\Plugin</Filter>
     </ClInclude>
   </ItemGroup>
