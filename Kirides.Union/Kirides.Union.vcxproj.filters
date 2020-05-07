@@ -211,9 +211,6 @@
     <Filter Include="Engine SDK\4. Gothic II NoTR\Overloads">
       <UniqueIdentifier>{225cc81e-eae0-432b-9f39-e93512644977}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Plugin\Workspace\ManaReg">
-      <UniqueIdentifier>{03aa2c6a-da20-4a4a-a10a-ce6489f25016}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Plugin\Workspace\Plugin">
       <UniqueIdentifier>{d48057be-4ede-430c-9473-a43423a7d437}</UniqueIdentifier>
     </Filter>
@@ -2781,7 +2778,10 @@
       <Filter>Plugin\Workspace\Plugin</Filter>
     </ClInclude>
     <ClInclude Include="ManaReg.h">
-      <Filter>Plugin\Workspace\ManaReg</Filter>
+      <Filter>Plugin\Workspace\Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="Quickloot.h">
+      <Filter>Plugin\Workspace\Plugin</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,12 @@
+#include <functional>
+#include <vector>
+
+#define IS_G1 (ENGINE == Engine_G1 || ENGINE == Engine_G1A)
 
 // This file added in headers queue
 // File: "Headers.h"
 namespace GOTHIC_ENGINE {
-  // Add your code here . . .
-  #include "ManaReg.h"
+	// Add your code here . . .
+#include "ManaReg.h"
+#include "Quickloot.h"
 }
